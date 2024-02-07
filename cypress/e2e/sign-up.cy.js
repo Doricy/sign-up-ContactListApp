@@ -18,7 +18,7 @@ describe('sign up feature', () => {
     // Click the cancel button
     cy.contains('cancel').click();
 
-    // Assert that the URL changes to the home page or any other appropriate page
+    // Assert that the URL changes to contactList page
     cy.url().should('eq', 'https://thinking-tester-contact-list.herokuapp.com/contactList');
 
   })
