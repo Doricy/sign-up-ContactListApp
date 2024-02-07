@@ -8,6 +8,13 @@ describe('sign up feature', () => {
     cy.get('#email').type('john.doe@example.com');
     cy.get('#password').type('password123');
 
+    // Submit the form
+    cy.get('button[type="submit"]').click();
+
+    // Assert that the success message is displayed
+    cy.contains('Sign Up successful').should('exist');
+
+
 
 
 
