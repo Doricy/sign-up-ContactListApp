@@ -14,6 +14,12 @@ describe('sign up feature', () => {
     // Assert that the success message is displayed
     cy.contains('Sign Up successful').should('exist');
 
+    //cancelling the sign-up process
+    // Click the cancel button
+    cy.contains('cancel').click();
+
+    // Assert that the URL changes to contactList page
+    cy.url().should('eq', 'https://thinking-tester-contact-list.herokuapp.com/contactList');
     
   })
 })
